@@ -1,0 +1,98 @@
+<%- include( process.cwd() + '/cliente/pages/header.ejs' ) %>
+
+    <body>
+
+        <!-- Offcanval Overlay -->
+        <div class="offcanvas-overlay"></div>
+        <!-- Offcanval Overlay -->
+
+        <!-- Wrapper -->
+        <div class="wrapper">
+
+            <%- include( process.cwd() + '/cliente/pages/navbar.ejs' ) %>
+                <!-- End Header -->
+                <%- include( process.cwd() + '/cliente/pages/sidebar.ejs' ) %>
+
+                    <div class="main-content">
+                        <div class="container-fluid">
+                            <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                                <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                    <h4 class="font-20 ">Adicionar movimentação</h4>
+                                </div>
+
+                                <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                                    <!-- Grid -->
+                                    <a class="btn" href="/user/movimentacao">Ver movimentações</a>
+                                    <div id="idVer" value="<%- id %>" hidden></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <!-- Card -->
+                                    <div class="card mb-30">
+
+                                        <div class="form-element base-control ">
+
+                                            <form id="formEnviar" class="row">
+                                                <!-- Form Group -->
+
+                                                <div class="col-md-12">
+                                                    <div class="form-group mb-4">
+                                                        <label for="descricao" class="mb-2 black bold">Descrição da movimentação</label>
+                                                        <input type="text" class="theme-input-style" id="descricao" placeholder="Descrição da movimentação ex: compra do mês">
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="form-group col-md-12">
+                                                    <label for="tipoMovimentacao" class="mb-2 black bold">Tipo da movimentacao</label>
+                                                    <input type="text" class="theme-input-style" id="tipoMovimentacao" placeholder="Tipo da movimentação ex: compra, será usado para agrupar no relatorio">
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label for="debOuCred" class="mb-2 black bold">Débito ou Crédito</label>
+                                                    <select class="theme-input-style" id="selectDeb">
+                                                        <option class="theme-input-style" value="C">Crédito</option>
+                                                        <option class="theme-input-style" value="D">Débito</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label for="valor" class="mb-2 black bold">Valor da movimentação</label>
+                                                    <input type="text" class="theme-input-style" id="valor" placeholder="Valor da movimentação ex: 152,14">
+                                                </div>
+
+                                                <div class="form-group col-md-4" style="padding-bottom:5px">
+                                                    <label for="data_mov" class="mb-2 black bold">Data da movimentação</label>
+                                                    <div class="dashboard-date style--four">
+                                                        <span class="input-group-addon">
+                                                            <img src="/cliente/assets/img/svg/calender.svg" alt="" class="svg">
+                                                        </span>
+
+                                                        <input type="text" id="data_mov" placeholder="Selecione a data" autocomplete="off">
+
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Button Group -->
+                                                <div class="button-group pt-1">
+                                                    <button type="submit" class="btn long">Gravar</button>
+                                                </div>
+                                                <!-- End Button Group -->
+                                            </form>
+                                            <!-- End Form -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
+        </div>
+
+
+        <%- include( process.cwd() + '/cliente/pages/footer.ejs' , { script: 'criarmovimentacao' } ) %>

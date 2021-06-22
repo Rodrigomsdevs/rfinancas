@@ -1,0 +1,50 @@
+<%- include( process.cwd() + '/cliente/pages/header.ejs' ) %>
+
+    <body>
+
+        <!-- Offcanval Overlay -->
+        <div class="offcanvas-overlay"></div>
+        <!-- Offcanval Overlay -->
+
+        <!-- Wrapper -->
+        <div class="wrapper">
+
+            <%- include( process.cwd() + '/cliente/pages/navbar.ejs' ) %>
+                <!-- End Header -->
+                <%- include( process.cwd() + '/cliente/pages/sidebar.ejs' ) %>
+
+                    <div class="main-content">
+                        <div class="container-fluid">
+                            <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                                <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                    <h4 class="font-20 ">Relatorios</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <!-- Card -->
+                                    <div class="card mb-30">
+
+                                        <div class="form-element base-control ">
+                                            <div class="col-md-12">
+                                                <div class="form-group mb-4">
+                                                    <label for="descricao" class="mb-2 black bold">Filtro por mês: </label>
+                                                    <input type="text" class="theme-input-style" id="mes" placeholder="Digite o mes">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <button class="btn" style="width: 100%;" id="emitir">Emitir</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
+        </div>
+
+
+        <%- include( process.cwd() + '/cliente/pages/footer.ejs' , { script: 'relatorio' } ) %>

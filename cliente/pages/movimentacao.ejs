@@ -1,0 +1,81 @@
+<%- include( process.cwd() + '/cliente/pages/header.ejs' ) %>
+
+    <body>
+
+        <!-- Offcanval Overlay -->
+        <div class="offcanvas-overlay"></div>
+        <!-- Offcanval Overlay -->
+
+        <!-- Wrapper -->
+        <div class="wrapper">
+
+            <%- include( process.cwd() + '/cliente/pages/navbar.ejs' ) %>
+                <!-- End Header -->
+                <%- include( process.cwd() + '/cliente/pages/sidebar.ejs' ) %>
+
+                    <div class="main-content">
+                        <div class="container-fluid">
+                            <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                                <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                    <h4 class="font-20 ">Lista de Movimentaçoes</h4>
+                                </div>
+
+                                <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                                    <!-- Grid -->
+                                    <a class="btn" href="/user/criar/movimentacao">Nova movimentação</a>
+                                    <!-- End Pagination -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <!-- Card -->
+                                    <div class="card mb-30">
+                                        <div class="table-responsive">
+                                            <!-- Invoice List Table -->
+                                            <table class="text-nowrap hoverable dh-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Tipo</th>
+                                                        <th>Descrição</th>
+                                                        <th>Valor</th>
+                                                        <th>Data</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tableBody">
+
+                                                </tbody>
+                                            </table>
+                                            <!-- End Invoice List Table -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                                <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                    <h4 class="font-20 ">Débitos</h4>
+                                </div>
+
+                                <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                                    <div id="debitosTotal"></div>
+                                </div>
+                            </div>
+
+                            <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                                <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                    <h4 class="font-20 ">Créditos</h4>
+                                </div>
+
+                                <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                                    <div id="creditosTotal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
+        </div>
+
+
+        <%- include( process.cwd() + '/cliente/pages/footer.ejs' , { script: 'movimentacao' } ) %>

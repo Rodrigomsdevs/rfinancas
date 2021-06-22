@@ -1,0 +1,99 @@
+<%- include( process.cwd() + '/cliente/pages/header.ejs' ) %>
+
+  <body>
+
+    <!-- Offcanval Overlay -->
+    <div class="offcanvas-overlay"></div>
+    <!-- Offcanval Overlay -->
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+      <%- include( process.cwd() + '/cliente/pages/navbar.ejs' ) %>
+        <!-- End Header -->
+        <%- include( process.cwd() + '/cliente/pages/sidebar.ejs' ) %>
+
+          <div class="main-content">
+            <div class="container-fluid">
+              <div class="row">
+
+
+                <div class="col-sm-12">
+                  <!-- Card -->
+                  <div class="card area-chart-box mb-30">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <div class="">
+                          <h4 class="mb-1">Movimentações</h4>
+                        </div>
+                        <div class="">
+                          <h2 id="porcentMov"></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="apex_area2-chart"></div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                    <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                      <h4 class="font-20 ">Débitos</h4>
+                    </div>
+
+                    <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                      <div id="debitosTotal"></div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                    <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                      <h4 class="font-20 ">Créditos</h4>
+                    </div>
+
+                    <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+                      <div id="creditosTotal"></div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- 
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                  <div class="card area-chart-box mb-30">
+                    <div class="card-body">
+                      <div class="">
+                        <h4 class="mb-1">Impression</h4>
+                        <p class="font-14 text_color">Hover to see detail</p>
+                      </div>
+                    </div>
+                    <div id="apex_area3-chart"></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                  <div class="card area-chart-box mb-30">
+                    <div class="card-body">
+                      <div class="">
+                        <h4 class="mb-1">Activity</h4>
+                        <p class="font-14 text_color">Hover to see detail</p>
+                      </div>
+                    </div>
+                    <div id="apex_area4-chart"></div>
+                  </div>
+                </div> 
+                ---->
+              </div>
+
+            </div>
+          </div>
+          <!-- End Main Content -->
+    </div>
+
+    <%- include( process.cwd() + '/cliente/pages/footer.ejs' , { script: 'index' } ) %>
